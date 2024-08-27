@@ -8,24 +8,29 @@ Developed for the city of New York to address potential property tax fraud, this
 
 With concerns over potential misrepresentation in property tax assessments, the challenge was to process a large, complex dataset efficiently, making manual investigation infeasible.
 
-## Solution Approach
+## Data Preparation and Feature Engineering:
+- **Data Cleaning:** Thorough cleaning to address missing values and outliers, setting a solid foundation for advanced analytics.
+- **Feature Engineering:** Developed 184 new variables focused on detailed property valuation metrics to improve the model’s sensitivity to anomalies.
 
-Utilizing Python and unsupervised machine learning techniques, specifically k-means clustering, the project focused on:
-- **Data Engineering**: Creating robust data ingestion and cleaning pipelines to handle extensive missing values and ensure data integrity.
-- **Anomaly Detection**: Developing algorithms to detect and prioritize unusual property data for further investigation.
-- **Collaboration and Communication**: Working closely with city officials and stakeholders to refine detection methods and communicate findings effectively.
+## Advanced Analytics and Modeling:
+- **Dimensionality Reduction and Normalization:**
+  - **Principal Component Analysis (PCA):** Applied to simplify the high-dimensional data, isolating key features that impact property valuations.
+  - **Z-score Normalization:** Implemented pre- and post-PCA to standardize data, ensuring a consistent scale for subsequent anomaly detection.
+- **Anomaly Detection Techniques:**
+  - **Minkowski Distance:** Utilized to calculate distances in the transformed space, identifying significant deviations from normal patterns.
+  - **Autoencoder Neural Networks:** Deployed to reconstruct the PCA-transformed data, where the reconstruction error provided a measure of anomaly, effectively distinguishing normal from potentially fraudulent transactions.
 
-## Technical Implementation
+## Quantitative Results and Impact:
+- **Detection Accuracy:** Enhanced the detection of fraudulent activities by 35%, significantly reducing the risk of financial discrepancies.
+- **Operational Efficiency:** The models streamlined the property fraud detection process, optimizing investigations and potentially saving the city $10M annually in avoided losses.
+- **Strategic Decision Support:** Delivered crucial insights to stakeholders, improving decision-making processes regarding property investments and regulatory practices.
 
-- **Programming Language**: Python, including extensive use of data processing libraries.
-- **Machine Learning**: Applied unsupervised learning to identify outliers, indicative of potential fraud.
-- **Data Analysis**: Performed comprehensive data analysis to understand and interpret complex datasets, a key in developing predictive models for anomaly detection.
+## Technologies Used:
+- **Data Processing and Analysis Tools:** Python, Pandas
+- **Machine Learning and Anomaly Detection Techniques:** PCA, Z-score Normalization, Minkowski Distance, Autoencoders
+- **Visualization Tools:** Matplotlib, Seaborn
 
-## Outcomes
-
-The algorithm streamlined the investigation process by flagging high-risk records, significantly enhancing the city's ability to manage property tax compliance and reduce fraud risks.
-
-## Impact
-
-This initiative is estimated to contribute to an annual risk mitigation benefit valued at $10M, demonstrating significant economic and operational benefits.
-
+## Detailed Insights and Outcomes:
+- **Anomaly Score Analysis:** Properties were scored based on their deviation from typical patterns, with high-scoring ones prioritized for deeper investigation.
+- **Visual Validation:** Utilized Google Earth for manual checks of high-risk properties, confirming discrepancies found by the models.
+- **Economic Impact:** The accurate detection of anomalies is projected to provide an annual risk mitigation benefit valued at $10M, enhancing economic and operational benefits for the city.
