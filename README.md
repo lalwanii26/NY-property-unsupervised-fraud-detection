@@ -20,17 +20,17 @@ With concerns over potential misrepresentation in property tax assessments, the 
   - **Minkowski Distance:** Utilized to calculate distances in the transformed space, identifying significant deviations from normal patterns.
   - **Autoencoder Neural Networks:** Deployed to reconstruct the PCA-transformed data, where the reconstruction error provided a measure of anomaly, effectively distinguishing normal from potentially fraudulent transactions.
 
+## Technologies Used:
+- **Data Processing and Analysis Tools:** Python, Pandas
+- **Machine Learning and Anomaly Detection Techniques:** PCA, Z-score Normalization, Minkowski Distance, Autoencoders
+- **Visualization Tools:** Matplotlib, Seaborn
+  
 ## Quantitative Results and Impact:
 - **Detection Accuracy:** Enhanced the detection of fraudulent activities by 35%, significantly reducing the risk of financial discrepancies.
 - **Operational Efficiency:** The models streamlined the property fraud detection process, optimizing investigations and potentially saving the city $10M annually in avoided losses.
 - **Strategic Decision Support:** Delivered crucial insights to stakeholders, improving decision-making processes regarding property investments and regulatory practices.
 
-## Technologies Used:
-- **Data Processing and Analysis Tools:** Python, Pandas
-- **Machine Learning and Anomaly Detection Techniques:** PCA, Z-score Normalization, Minkowski Distance, Autoencoders
-- **Visualization Tools:** Matplotlib, Seaborn
-
-## Detailed Insights and Outcomes:
+## Insights and Outcomes:
 - **Anomaly Score Analysis:** Properties were scored based on their deviation from typical patterns, with high-scoring ones prioritized for deeper investigation.
 - **Visual Validation:** Utilized Google Earth for manual checks of high-risk properties, confirming discrepancies found by the models.
 - **Economic Impact:** The accurate detection of anomalies is projected to provide an annual risk mitigation benefit valued at $10M, enhancing economic and operational benefits for the city.
